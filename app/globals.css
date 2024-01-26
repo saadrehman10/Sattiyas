@@ -2006,8 +2006,8 @@ End Review
  End Progress Bar
  ------------------------------------*/
 .cs_page_heading {
-  padding: 90px 0;
-  min-height: 300px;
+  
+  min-height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2020,6 +2020,7 @@ End Review
 }
 .cs_page_heading .container {
   z-index: 1;
+  margin-top: 10rem;
 }
 .cs_page_heading .cs_hero_overlay {
   width: 100%;

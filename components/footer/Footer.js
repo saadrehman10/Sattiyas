@@ -38,11 +38,11 @@ export default function Footer(){
                             <div className="cs_footer_widget cs_menu_widget">
                             <h3 className="cs_footer_widget_title cs_fs_21 cs_semibold">Get to know</h3>
                             <ul>
-                                <li><a href="about.html" style={{color:"grey"}}>About Us</a></li>
-                                <li><a href="shop.html" style={{color:"grey"}}>Product</a></li>
-                                <li><a href="blog_details.html" style={{color:"grey"}}>Press</a></li>
-                                <li><a href="blog.html" style={{color:"grey"}}>Blog</a></li>
-                                <li><a href="contact.html" style={{color:"grey"}}>Contact Us</a></li>
+                                <li><a href="/about" style={{color:"grey"}}>About Us</a></li>
+                                <li><a href="/shop" style={{color:"grey"}}>Product</a></li>
+                                <li><a href="/blog_details" style={{color:"grey"}}>Press</a></li>
+                                <li><a href="/blog" style={{color:"grey"}}>Blog</a></li>
+                                <li><a href="/contact" style={{color:"grey"}}>Contact Us</a></li>
                             </ul>
                             </div>
                         </div>

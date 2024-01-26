@@ -1,20 +1,51 @@
+'use client';
 import Image from "next/image";
+import "/app/globals.css";
+import Link from "next/link";
+import { useState,useEffect } from "react";
+import card4 from "/public/card4.jpg";
+import user from '/public/user.png';
+import user2 from "/public/user2.png";
+import user3 from "/public/user3.png";
+import about_bg from "/public/about_bg.jpg"
 
-export default function About() {
+export default function  About() {
+  const [index_user_review , setIndex_user_review]=useState(0);
+  
+  
   return (
       <>
+      <section className="cs_page_heading text-center position-relative cs_bg_filed ">
+      <Image
+          className="position-absolute"
+           src={about_bg}
+           alt="about_background"
+           height={800}
+           width={1920}
+           ></Image>
+          <div className="cs_hero_overlay position-absolute"></div>
+          <div className="container position-relative">
+            <h2 className="cs_fs_50 cs_bold cs_white_color mb-">About Us</h2>
+          </div>
+        </section>
       <section>
-              <div class="cs_height_140 cs_height_lg_80"></div>
-              <div class="cs_card cs_style_4">
-                <div class="container">
-                  <div class="row cs_gap_y_30 align-items-center">
-                    <div class="col-xl-5">
-                      <div class="cs_card_thumb position-relative">
-                        {/* <img src="assets/img/card4.jpg" alt="Card Image" class=" cs_radius_5 w-100"> */}
-                        <div class="cs_card_badge position-absolute">
-                          <h3 class="cs_fs_50 mb-0 cs_bold">Since</h3>
-                          <h3 class="cs_fs_50 mb-0 cs_bold">2010</h3>
-                          <div class="cs_shape_1">
+              <div className="cs_height_140 cs_height_lg_80"></div>
+              <div className="cs_card cs_style_4">
+                <div className="container">
+                  <div className="row cs_gap_y_30 align-items-center">
+                    <div className="col-xl-5">
+                      <div className="cs_card_thumb position-relative">
+                        <Image
+                        className="cs_radius_10 w-100"
+                        src={card4}
+                        alt="about_card"
+                        height={700}
+                        width={350}
+                        ></Image>
+                        <div className="cs_card_badge position-absolute">
+                          <h3 className="cs_fs_50 mb-0 cs_bold">Since</h3>
+                          <h3 className="cs_fs_50 mb-0 cs_bold">2010</h3>
+                          <div className="cs_shape_1">
                             <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <g clip-path="url(#clip0_395_2354)">
                               <path d="M9.61646 9.6377L1.83244 5.50743C0.535168 4.80239 0.141773 3.10085 1.04759 1.60435C1.95302 0.20786 3.75534 -0.385145 5.05261 0.319899C5.55144 0.621839 5.94989 1.02339 6.14794 1.52416L9.61646 9.6377Z" fill="#5E5E5E"/>
@@ -28,7 +59,7 @@ export default function About() {
                               </defs>
                             </svg>
                           </div>  
-                          <div class="cs_shape_2">
+                          <div className="cs_shape_2">
                             <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <g clip-path="url(#clip0_395_2350)">
                               <path d="M5.8999 4.2002L13.6999 8.3002C14.9999 9.0002 15.3999 10.7002 14.4999 12.2002C13.5999 13.6002 11.7999 14.2002 10.4999 13.5002C9.9999 13.2002 9.5999 12.8002 9.3999 12.3002L5.8999 4.2002Z" fill="#5E5E5E"/>
@@ -45,22 +76,22 @@ export default function About() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6 offset-xl-1">
-                      <div class="cs_card_info">
-                        <h2 class="cs_card_title cs_fs_50 cs_bold">Know Our Store</h2>
-                        <p class="cs_card_subtitle">
+                    <div className="col-xl-6 offset-xl-1">
+                      <div className="cs_card_info">
+                        <h2 className="cs_card_title cs_fs_50 cs_bold">Know Our Store</h2>
+                        <p className="cs_card_subtitle">
                           Welcome to our online fashion store, where style meets convenience. Explore the latest trends, timeless
-                          classics, and everything in between. Elevate your wardrobe with our curated collection of clothing,
+                          classNameics, and everything in between. Elevate your wardrobe with our curated collection of clothing,
                           accessories, and more. Shop with confidence, knowing that quality and fashion are just a click away.
                           Join
                           us in the world of endless possibilities and express your unique style effortlessly. Happy shopping!
                         </p>
-                        <div class="cs_card_feature_list">
-                          <div class="cs_store_feature position-relative">
-                            <h4 class="cs_feature_title cs_fs_21 cs_semibold">Fashion industries leading</h4>
-                            <p class="cs_feature_subtitle mb-0">We are a recognized authority in our field, setting industry
-                              standards {/* <br> */} through expertise and innovation.</p>
-                            <div class="cs_feature_icon cs_accent_color position-absolute">
+                        <div className="cs_card_feature_list">
+                          <div className="cs_store_feature position-relative">
+                            <h4 className="cs_feature_title cs_fs_21 cs_semibold">Fashion industries leading</h4>
+                            <p className="cs_feature_subtitle mb-0">We are a recognized authority in our field, setting industry
+                              standards<br></br>through expertise and innovation.</p>
+                            <div className="cs_feature_icon cs_accent_color position-absolute">
                               <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                   d="M0 9.62275C0.0320847 8.83012 0.390363 8.2499 1.11227 7.93388C1.84487 7.61269 2.54004 7.73702 3.1443 8.25508C4.06406 9.0477 4.96777 9.85587 5.87684 10.6589C6.04796 10.8091 6.21908 10.9645 6.39554 11.1148C6.65757 11.3427 6.88751 11.3323 7.12279 11.0733C9.096 8.91819 11.0639 6.75789 13.0371 4.5976C14.3686 3.13668 15.7054 1.68094 17.037 0.220014C17.2027 0.0386945 17.3952 -0.0493752 17.6412 0.0283334C17.8498 0.0956808 18.0102 0.277001 17.9995 0.494585C17.9941 0.608557 17.946 0.732891 17.8819 0.831322C16.3685 3.19884 14.8552 5.56118 13.3419 7.92352C11.5986 10.6433 9.85534 13.3631 8.11207 16.0881C7.80727 16.5647 7.39551 16.8859 6.81264 16.974C6.15491 17.0776 5.60947 16.8704 5.19237 16.3782C3.69508 14.6116 2.20849 12.8399 0.716557 11.0681C0.433143 10.7469 0.133686 10.4257 0.0534744 9.98539C0.0267372 9.85587 0.0160423 9.73154 0 9.62275Z"
@@ -68,11 +99,11 @@ export default function About() {
                               </svg>
                             </div>
                           </div>
-                          <div class="cs_store_feature position-relative">
-                            <h4 class="cs_feature_title cs_fs_21 cs_semibold">Express your unique style</h4>
-                            <p class="cs_feature_subtitle mb-0">We believe in fashion as a form of self-expression. Our diverse
-                              range of {/* <br>  */}products ensures that you can find pieces that reflect your individual style.</p>
-                            <div class="cs_feature_icon cs_accent_color position-absolute">
+                          <div className="cs_store_feature position-relative">
+                            <h4 className="cs_feature_title cs_fs_21 cs_semibold">Express your unique style</h4>
+                            <p className="cs_feature_subtitle mb-0">We believe in fashion as a form of self-expression. Our diverse
+                              range of <br></br>products ensures that you can find pieces that reflect your individual style.</p>
+                            <div className="cs_feature_icon cs_accent_color position-absolute">
                               <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                   d="M0 9.62275C0.0320847 8.83012 0.390363 8.2499 1.11227 7.93388C1.84487 7.61269 2.54004 7.73702 3.1443 8.25508C4.06406 9.0477 4.96777 9.85587 5.87684 10.6589C6.04796 10.8091 6.21908 10.9645 6.39554 11.1148C6.65757 11.3427 6.88751 11.3323 7.12279 11.0733C9.096 8.91819 11.0639 6.75789 13.0371 4.5976C14.3686 3.13668 15.7054 1.68094 17.037 0.220014C17.2027 0.0386945 17.3952 -0.0493752 17.6412 0.0283334C17.8498 0.0956808 18.0102 0.277001 17.9995 0.494585C17.9941 0.608557 17.946 0.732891 17.8819 0.831322C16.3685 3.19884 14.8552 5.56118 13.3419 7.92352C11.5986 10.6433 9.85534 13.3631 8.11207 16.0881C7.80727 16.5647 7.39551 16.8859 6.81264 16.974C6.15491 17.0776 5.60947 16.8704 5.19237 16.3782C3.69508 14.6116 2.20849 12.8399 0.716557 11.0681C0.433143 10.7469 0.133686 10.4257 0.0534744 9.98539C0.0267372 9.85587 0.0160423 9.73154 0 9.62275Z"
@@ -81,19 +112,19 @@ export default function About() {
                             </div>
                           </div>
                         </div>
-                        <a href="shop.html" class="cs_btn cs_style_1 cs_fs_16 cs_medium">Shop Now</a>
+                        <a href="shop.html" className="cs_btn cs_style_1 cs_fs_16 cs_medium">Shop Now</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="cs_height_140 cs_height_lg_80"></div>
+              <div classNameName="cs_height_140 cs_height_lg_80"></div>
             </section>
                 
-            <div class="cs_video_block cs_style_1 container-fluid cs_bg_filed" data-src="assets/img/video.jpg">
-              <a href="https://www.youtube.com/embed/R_Lf1Au-bqo" class="cs_play_btn_container cs_video_open cs_accent_bg"
+            <div className="cs_video_block cs_style_1 container-fluid cs_bg_filed" data-src="assets/img/video.jpg">
+              <a href="https://www.youtube.com/embed/R_Lf1Au-bqo" className="cs_play_btn_container cs_video_open cs_accent_bg"
                 data-modal="video">
-                <span class="cs_play_btn">
+                <span className="cs_play_btn">
                   <svg width="30" height="33" viewBox="0 0 30 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_395_2379)">
                       <path
@@ -111,20 +142,20 @@ export default function About() {
             </div>
             
             <section>
-              <div class="cs_height_120 cs_height_lg_70"></div>
-              <div class="container">
-                <div class="cs_section_heading cs_style_2">
-                  <div class="cs_hesction_heading_left">
-                    <h2 class="cs_section_title cs_fs_50 cs_bold mb-0">Why choose our online offline store</h2>
+              <div className="cs_height_120 cs_height_lg_70"></div>
+              <div className="container">
+                <div className="cs_section_heading cs_style_2">
+                  <div className="cs_hesction_heading_left">
+                    <h2 className="cs_section_title cs_fs_50 cs_bold mb-0">Why choose our online offline store</h2>
                   </div>
-                  <div class="cs_hesction_heading_right">
-                    <p class="mb-0">We believe that winter fashion should be both functional and fabulous. Our Winter Fashion Collection reflects our commitment to quality, comfort, and style. Embrace the season with confidence.</p>
+                  <div className="cs_hesction_heading_right">
+                    <p className="mb-0">We believe that winter fashion should be both functional and fabulous. Our Winter Fashion Collection reflects our commitment to quality, comfort, and style. Embrace the season with confidence.</p>
                   </div>
                 </div>
-                <div class="cs_height_63 cs_height_lg_50"></div>
-                <div class="cs_featured_container">
-                  <div class="cs_iconbox cs_style_2">
-                    <div class="cs_iconbox_icon cs_accent_color">
+                <div className="cs_height_63 cs_height_lg_50"></div>
+                <div className="cs_featured_container">
+                  <div className="cs_iconbox cs_style_2">
+                    <div className="cs_iconbox_icon cs_accent_color">
                       <svg width="50" height="52" viewBox="0 0 50 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_395_2389)">
                           <path
@@ -144,14 +175,14 @@ export default function About() {
                         </defs>
                       </svg>
                     </div>
-                    <h4 class="cs_iconbox_title cs_fs_21 cs_semibold">Quality Assurance</h4>
-                    <p class="cs_iconbox_subtitle mb-0">
+                    <h4 className="cs_iconbox_title cs_fs_21 cs_semibold">Quality Assurance</h4>
+                    <p className="cs_iconbox_subtitle mb-0">
                       Our products are carefully curated for quality and durability, ensuring that you get the best value for your
                       money.
                     </p>
                   </div>
-                  <div class="cs_iconbox cs_style_2">
-                    <div class="cs_iconbox_icon cs_accent_color">
+                  <div className="cs_iconbox cs_style_2">
+                    <div className="cs_iconbox_icon cs_accent_color">
                       <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_395_2397)">
                           <path
@@ -165,13 +196,13 @@ export default function About() {
                         </defs>
                       </svg>
                     </div>
-                    <h4 class="cs_iconbox_title cs_fs_21 cs_semibold">Exceptional Customer Service</h4>
-                    <p class="cs_iconbox_subtitle mb-0">
+                    <h4 className="cs_iconbox_title cs_fs_21 cs_semibold">Exceptional Customer Service</h4>
+                    <p className="cs_iconbox_subtitle mb-0">
                       We prioritize your satisfaction. Our responsive support team is here to assist you every step of the way.
                     </p>
                   </div>
-                  <div class="cs_iconbox cs_style_2">
-                    <div class="cs_iconbox_icon cs_accent_color">
+                  <div className="cs_iconbox cs_style_2">
+                    <div className="cs_iconbox_icon cs_accent_color">
                       <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_395_2403)">
                           <path
@@ -189,14 +220,14 @@ export default function About() {
                       </svg>
 
                     </div>
-                    <h4 class="cs_iconbox_title cs_fs_21 cs_semibold">User-friendly Experience</h4>
-                    <p class="cs_iconbox_subtitle mb-0">
+                    <h4 className="cs_iconbox_title cs_fs_21 cs_semibold">User-friendly Experience</h4>
+                    <p className="cs_iconbox_subtitle mb-0">
                       Our website is designed with you in mind. Enjoy a seamless and intuitive shopping experience from start to
                       finish.
                     </p>
                   </div>
-                  <div class="cs_iconbox cs_style_2">
-                    <div class="cs_iconbox_icon cs_accent_color">
+                  <div className="cs_iconbox cs_style_2">
+                    <div className="cs_iconbox_icon cs_accent_color">
                       <svg width="76" height="52" viewBox="0 0 76 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_395_2410)">
                           <path
@@ -220,13 +251,13 @@ export default function About() {
                       </svg>
 
                     </div>
-                    <h4 class="cs_iconbox_title cs_fs_21 cs_semibold">Fast and Secure Shipping</h4>
-                    <p class="cs_iconbox_subtitle mb-0">
+                    <h4 className="cs_iconbox_title cs_fs_21 cs_semibold">Fast and Secure Shipping</h4>
+                    <p className="cs_iconbox_subtitle mb-0">
                       We offer reliable shipping options, delivering your fashion finds safely and swiftly to your doorstep.
                     </p>
                   </div>
-                  <div class="cs_iconbox cs_style_2">
-                    <div class="cs_iconbox_icon cs_accent_color">
+                  <div className="cs_iconbox cs_style_2">
+                    <div className="cs_iconbox_icon cs_accent_color">
                       <svg width="59" height="52" viewBox="0 0 59 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_395_2419)">
                           <path
@@ -244,14 +275,14 @@ export default function About() {
                       </svg>
 
                     </div>
-                    <h4 class="cs_iconbox_title cs_fs_21 cs_semibold">Affordable Luxury</h4>
-                    <p class="cs_iconbox_subtitle mb-0">
+                    <h4 className="cs_iconbox_title cs_fs_21 cs_semibold">Affordable Luxury</h4>
+                    <p className="cs_iconbox_subtitle mb-0">
                       Discover affordable fashion that doesn't compromise on style. Our competitive prices mean you can look your
                       best payment.
                     </p>
                   </div>
-                  <div class="cs_iconbox cs_style_2">
-                    <div class="cs_iconbox_icon cs_accent_color">
+                  <div className="cs_iconbox cs_style_2">
+                    <div className="cs_iconbox_icon cs_accent_color">
                       <svg width="59" height="52" viewBox="0 0 59 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_395_2426)">
                           <path
@@ -274,73 +305,88 @@ export default function About() {
                         </defs>
                       </svg>
                     </div>
-                    <h4 class="cs_iconbox_title cs_fs_21 cs_semibold">Regular Promotions</h4>
-                    <p class="cs_iconbox_subtitle mb-0">Keep an eye out for our exclusive deals and promotions, allowing you to save even more on your favorite fashion pieces.</p>
+                    <h4 className="cs_iconbox_title cs_fs_21 cs_semibold">Regular Promotions</h4>
+                    <p className="cs_iconbox_subtitle mb-0">Keep an eye out for our exclusive deals and promotions, allowing you to save even more on your favorite fashion pieces.</p>
                   </div>
                 </div>
               </div>
-              <div class="cs_height_140 cs_height_lg_80"></div>
+              <div className="cs_height_140 cs_height_lg_80"></div>
             </section>
           
-            <section class="cs_gray_bg">
-              <div class="cs_height_120 cs_height_lg_70"></div>
-              <div class="container">
-                <h2 class="cs_section_title cs_fs_50 cs_bold mb-0 text-center">What Our People Says</h2>
+            <section className="cs_gray_bg">
+              <div className="cs_height_120 cs_height_lg_70"></div>
+              <div className="container">
+                <h2 className="cs_section_title cs_fs_50 cs_bold mb-0 text-center">What Our People Says</h2>
               </div>
-              <div class="cs_height_35 cs_height_lg_30"></div>
-              <div class="cs_slider position-relative">
-                <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
+              <div className="cs_height_35 cs_height_lg_30"></div>
+              <div className="cs_slider position-relative">
+                <div className="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
                   data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="1" data-md-slides="1"  data-lg-slides="1" data-add-slides="1">
-                  <div class="container">
-                    <div class="cs_slider_wrapper">
-                      <div class="slick_slide_in">
-                        <div class="cs_testimonial cs_style_1 text-center">
-          {/*                 <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br> customer for the past year, and I can confidently say that this is my go-to online shopping <br> destination. Highly recommend!</blockquote>
-          */}                <div class="cs_testimonial_user">
-                            <div class="cs_avatar_thumb">
-          {/*                     <img src="assets/img/user.png" alt="Avatar">
-          */}                  </div>
-                            <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0">Bonal Ahmad</h4>
-                            <p class="cs_avatar_subtitle mb-0">From London</p>
+                  <div className="container">
+                    <div className="cs_slider_wrapper">
+                      <div className="slick_slide_in">
+                        <div className="cs_testimonial cs_style_1 text-center">
+                         <blockquote className="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br> customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
+                          <div className="cs_testimonial_user">
+                            <div className="cs_avatar_thumb">
+                              <Image 
+                              src={user}
+                              alt="user_avatar"
+                              height={20}
+                              width={20}
+                              ></Image>
+                           </div>
+                            <h4 className="cs_avatar_title cs_fs_21 cs_semibold mb-0">Bonal Ahmad</h4>
+                            <p className="cs_avatar_subtitle mb-0">From London</p>
                           </div>
                         </div>
                       </div>
-                      <div class="slick_slide_in">
-                        <div class="cs_testimonial cs_style_1 text-center">
-          {/*                 <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br> customer for the past year, and I can confidently say that this is my go-to online shopping <br> destination. Highly recommend!</blockquote>
-          */}                <div class="cs_testimonial_user">
-                            <div class="cs_avatar_thumb">
-          {/*                     <img src="assets/img/user2.png" alt="Avatar">
-          */}                  </div>
-                            <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0">Jhon Doe</h4>
-                            <p class="cs_avatar_subtitle mb-0">From UK</p>
+                      <div className="slick_slide_in">
+                        <div className="cs_testimonial cs_style_1 text-center">
+                            <blockquote className="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br> customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
+                         <div className="cs_testimonial_user">
+                            <div className="cs_avatar_thumb">
+                              <Image
+                              src={user2}
+                              alt="user_avatar"
+                              height={20}
+                              width={20}
+                              ></Image>
+                            </div>
+                            <h4 className="cs_avatar_title cs_fs_21 cs_semibold mb-0">Jhon Doe</h4>
+                            <p className="cs_avatar_subtitle mb-0">From UK</p>
                           </div>
                         </div>
                       </div>
-                      <div class="slick_slide_in">
-                        <div class="cs_testimonial cs_style_1 text-center">
-          {/*                 <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br> customer for the past year, and I can confidently say that this is my go-to online shopping <br> destination. Highly recommend!</blockquote>
-          */}                <div class="cs_testimonial_user">
-                            <div class="cs_avatar_thumb">
-          {/*                     <img src="assets/img/user3.png" alt="Avatar">
-          */}                  </div>
-                            <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0">Kalio Hokeo</h4>
-                            <p class="cs_avatar_subtitle mb-0">From London</p>
+                      <div className="slick_slide_in">
+                        <div className="cs_testimonial cs_style_1 text-center">
+                           <blockquote className="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br> customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
+                         <div className="cs_testimonial_user">
+                            <div className="cs_avatar_thumb">
+                            <Image
+                              src={user3}
+                              alt="user_avatar"
+                              height={20}
+                              width={20}
+                              ></Image>
+                            </div>
+                            <h4 className="cs_avatar_title cs_fs_21 cs_semibold mb-0">Kalio Hokeo</h4>
+                            <p className="cs_avatar_subtitle mb-0">From London</p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="cs_slider_arrows cs_style_1 cs_hide_mobile">
-                  <div class="cs_left_arrow cs_slider_arrow cs_accent_color">
+                <div className="cs_slider_arrows cs_style_1 cs_hide_mobile">
+                  <div className="cs_left_arrow cs_slider_arrow cs_accent_color">
                     <span>
                       <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.292892 7.29289C-0.0976295 7.68342 -0.0976295 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM36 7L1 7V9L36 9V7Z" fill="currentColor" />
                       </svg>
                     </span>
                   </div>
-                  <div class="cs_right_arrow cs_slider_arrow cs_accent_color">
+                  <div className="cs_right_arrow cs_slider_arrow cs_accent_color">
                     <span>
                       <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M35.7071 8.70711C36.0976 8.31659 36.0976 7.68342 35.7071 7.2929L29.3431 0.928935C28.9526 0.53841 28.3195 0.53841 27.9289 0.928935C27.5384 1.31946 27.5384 1.95262 27.9289 2.34315L33.5858 8L27.9289 13.6569C27.5384 14.0474 27.5384 14.6805 27.9289 15.0711C28.3195 15.4616 28.9526 15.4616 29.3431 15.0711L35.7071 8.70711ZM-8.74228e-08 9L35 9L35 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor" />
@@ -348,9 +394,9 @@ export default function About() {
                     </span>
                   </div>
                 </div>
-                <div class="cs_pagination cs_style_2 cs_hide_desktop"></div>
+                <div className="cs_pagination cs_style_2 cs_hide_desktop"></div>
               </div>
-              <div class="cs_height_135 cs_height_lg_80"></div>
+              <div className="cs_height_135 cs_height_lg_80"></div>
             </section>
 
         
