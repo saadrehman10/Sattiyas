@@ -1,4 +1,3 @@
-'use client';
 import Image from "next/image";
 import "/app/globals.css";
 import Link from "next/link";
