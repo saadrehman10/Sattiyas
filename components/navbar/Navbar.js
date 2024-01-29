@@ -85,7 +85,7 @@ export default function Navbar(){
                         <Link href="">Pages</Link>
                         <ul>
                             <li><Link href="/about">About</Link></li>
-                            <li><Link href="/blog">Blog Details</Link></li>
+                            <li><Link href="/blog_details">Blog Details</Link></li>
                             <li><Link href="/cart">Cart</Link></li>
                             <li><Link href="/checkout">Checkout</Link></li>
                             <li><Link href="/success">Success</Link></li>

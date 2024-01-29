@@ -17,7 +17,7 @@ export default function People_review(){
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true, // Set to true if you want automatic sliding
+        autoplay: true, 
         beforeChange: (current, next) => setCurrentSlide(next),
     };
 
