@@ -11,7 +11,7 @@ export default function Cart(){
               <div className="container mt-80">
                 <div className="cs_height_80 cs_height_lg_60"></div>
                 <div className="cs_shop_page_heading text-center">
-                  <h1 className="cs_fs_50 cs_bold">Shopping Cart</h1>
+                  <h1 className="cs_fs_50 cs_bold text-black">Shopping Cart</h1>
                   <div className="cs_shop_breadcamp cs_medium">
                     <Link href="/index">Home</Link>
                     <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">

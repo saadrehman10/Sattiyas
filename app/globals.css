@@ -34,6 +34,7 @@
 1. Typography
 ----------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap");
+
 body,
 html {
   color: #5e5e5e !important;
@@ -7195,6 +7196,12 @@ Pavigation styling
   margin-bottom: 0px;
 }
 
+.cs_checkout-div{
+  position: relative !important; 
+  height: 0px !important; 
+  width: 0px !important;
+  float: left !important;
+}
 .cs_shop-input {
   display: block;
   width: 100%;
