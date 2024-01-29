@@ -28,7 +28,7 @@ export default function Wishlist(){
                 </div>
                 <div className="cs_height_80 cs_height_lg_60"></div>
               </div>
-            </section>
+            </section> 
 
             <div className="container">
               <div className="table-responsive">
