@@ -6,16 +6,16 @@ import People_review from "@/components/people_review/People_review"
 export default function Home() {
   return (
     <>
-       {/* <Navbar></Navbar> */}
+       
        <div>
        <People_review></People_review>
        
-       <Instagram_bar></Instagram_bar>
+       
 
 
        </div>
-       
-       <Footer></Footer>
+       <Instagram_bar></Instagram_bar>
+      
     </>
       
   )
