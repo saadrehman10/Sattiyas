@@ -7084,15 +7084,15 @@ Pavigation styling
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0px;
+  flex-direction: column;
+  gap: 10px;
 }
 .cs_coupon-doce-form input {
   background-color: transparent;
-  padding: 6px 15px;
+  padding: 15px;
   border: 1px solid #070707;
-  border-right: 0;
   border-radius: 0px;
-  height: 50px;
+  height: auto;
   outline: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -7102,7 +7102,8 @@ Pavigation styling
 }
 @media (max-width: 991px) {
   .cs_coupon-doce-form input {
-    height: 44px;
+    padding: 10px;
+    height: auto;
   }
 }
 .cs_coupon-doce-form input::-webkit-input-placeholder {

@@ -8,12 +8,12 @@ import Link from "next/link";
 export default function Checkout(){
      return(
         <>
-        <nav><Navbar></Navbar></nav>
+        <nav><Navbar></Navbar><br></br><br></br><br></br></nav>
         <section>
             <div className="container">
                <div className="cs_height_80 cs_height_lg_60"></div>
                <div className="cs_shop_page_heading text-center">
-               <h1 className="cs_fs_50 cs_bold">Checkout</h1>
+               <h1 className="cs_fs_50 cs_bold text-black">Checkout</h1>
                <div className="cs_shop_breadcamp cs_medium">
                   <Link href="/">Home</Link>
                   <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@ export default function Checkout(){
                <div className="col-xl-7">
                <p className="cs_checkout-alert m-0">Have a coupon? <Link href="">Click here to enter your code</Link></p>
                <div className="cs_height_40 cs_height_lg_40"></div>
-               <h2 className="cs_checkout-title cs_fs_28">Billing Details</h2>
+               <h2 className="cs_checkout-title cs_fs_28 text-black">Billing Details</h2>
                <div className="cs_height_45 cs_height_lg_40"></div>
                <div className="row">
                   <div className="col-lg-6">
@@ -84,7 +84,7 @@ export default function Checkout(){
                   </div>
                </div>
                <div className="cs_height_45 cs_height_lg_45"></div>
-               <h2 className="cs_checkout-title">Additional information</h2>
+               <h2 className="cs_checkout-title text-black">Additional information</h2>
                <div className="cs_height_25 cs_height_lg_25"></div>
                <label className="cs_shop-label">Order notes (optional)</label>
                <textarea cols="30" rows="6" className="cs_shop-input"></textarea>

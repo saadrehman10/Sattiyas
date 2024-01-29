@@ -1,6 +1,12 @@
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import cartProduct1 from '/public/cart-product-1.jpeg';
+import cartProduct2 from '/public/cart-product-2.jpeg';
+import cartProduct3 from '/public/cart-product-3.jpeg';
+import { faAngleDown, faAngleUp, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Cart(){
     return(
@@ -42,6 +48,12 @@ export default function Cart(){
                         <tr>
                           <td>
                             <div className="cs_cart_table_media">
+                              <Image
+                              src={cartProduct1}
+                              alt="cart_Product "
+                              height={50}
+                              width={50}
+                              ></Image>
                              {/*  <img src="assets/img/cart-product-1.jpeg" alt="Thumb"> */}
                               <h3>Pure black cotton men T-shirt</h3>
                             </div>
@@ -49,34 +61,39 @@ export default function Cart(){
                           <td>$205.00</td>
                           <td>
                             <div className="cs_quantity">
-                              <button className="cs_quantity_btn cs_increment"><i className="fa-solid fa-angle-up"></i></button>
+                              <button className="cs_quantity_btn cs_increment"><FontAwesomeIcon style={{fontSize:'15px'}} icon={faAngleUp}></FontAwesomeIcon></button>
                               <span className="cs_quantity_input">1</span>
-                              <button className="cs_quantity_btn cs_decrement"><i className="fa-solid fa-angle-down"></i></button>
+                              <button className="cs_quantity_btn cs_decrement"><FontAwesomeIcon style={{fontSize:'15px'}} icon={faAngleDown}></FontAwesomeIcon></button>
                             </div>
                           </td>
                           <td>$205.00</td>
                           <td className="text-center">
-                            <button className="cs_cart-table-close"><i className="fa-solid fa-xmark"></i></button>
+                            <button className="cs_cart-table-close"><FontAwesomeIcon style={{fontSize:'15px'}} icon={faXmark}></FontAwesomeIcon></button>
                           </td>
                         </tr>
                         <tr>
                           <td>
                             <div className="cs_cart_table_media">
-                              {/* <img src="assets/img/cart-product-2.jpeg" alt="Thumb"> */}
+                            <Image
+                              src={cartProduct2}
+                              alt="cart_Product "
+                              height={50}
+                              width={50}
+                              ></Image>
                               <h3>Satin silk sleeping were</h3>
                             </div>
                           </td>
                           <td>$550.00</td>
                           <td>
                             <div className="cs_quantity">
-                              <button className="cs_quantity_btn cs_increment"><i className="fa-solid fa-angle-up"></i></button>
+                              <button className="cs_quantity_btn cs_increment"><FontAwesomeIcon style={{fontSize:'15px'}} icon={faAngleUp}></FontAwesomeIcon></button>
                               <span className="cs_quantity_input">1</span>
-                              <button className="cs_quantity_btn cs_decrement"><i className="fa-solid fa-angle-down"></i></button>
+                              <button className="cs_quantity_btn cs_decrement"><FontAwesomeIcon style={{fontSize:'15px'}} icon={faAngleDown}></FontAwesomeIcon></button>
                             </div>
                           </td>
                           <td>$550.00</td>
                           <td className="text-center">
-                            <button className="cs_cart-table-close"><i className="fa-solid fa-xmark"></i></button>
+                            <button className="cs_cart-table-close"><FontAwesomeIcon style={{fontSize:'15px'}} icon={faXmark}></FontAwesomeIcon></button>
                           </td>
                         </tr>
                       </tbody>
@@ -89,7 +106,7 @@ export default function Cart(){
                     <div className="cs_shop-card">
                       <h2 className="cs_fs_21 cs_medium">Coupon Code</h2>
                       <form action="#" className="cs_coupon-doce-form">
-                       {/*  <input type="text" placeholder="Coupon Code"> */}
+                       <input type="text" placeholder="Coupon Code"></input> 
                         <button className="cs_product_btn cs_color1 cs_semi_bold">Apply</button>
                       </form>
                       <div className="cs_height_30 cs_height_lg_30"></div>
