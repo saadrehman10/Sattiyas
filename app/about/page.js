@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import "/app/globals.css";
 import Link from "next/link";
@@ -332,22 +333,22 @@ export default function  About() {
               <div className="cs_slider position-relative">
                <Slider {...settings}>
                <div class="slick_slide_in">
-              <div class="cs_testimonial cs_style_1 text-center">
-                <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br>customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
-                <div class="cs_testimonial_user">
-                  <div class="cs_avatar_thumb">
-                    <Image
-                    src={user}
-                    alt="user_avater"
-                    height={20}
-                    width={20}
-                    ></Image>
+                <div class="cs_testimonial cs_style_1 text-center">
+                  <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br>customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
+                  <div class="cs_testimonial_user">
+                    <div class="cs_avatar_thumb">
+                      <Image
+                      src={user}
+                      alt="user_avater"
+                      height={20}
+                      width={20}
+                      ></Image>
+                    </div>
+                    <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0">Saad ur Rehman</h4>
+                    <p class="cs_avatar_subtitle mb-0">From Karachi</p>
                   </div>
-                  <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0">Saad ur Rehman</h4>
-                  <p class="cs_avatar_subtitle mb-0">From Karachi</p>
                 </div>
               </div>
-            </div>
             <div class="slick_slide_in">
               <div class="cs_testimonial cs_style_1 text-center">
                 <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br>customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
