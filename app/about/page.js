@@ -3,6 +3,9 @@ import Image from "next/image";
 import "/app/globals.css";
 import Link from "next/link";
 import { useState,useEffect } from "react";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import card4 from "/public/card4.jpg";
 import user from '/public/user.png';
 import user2 from "/public/user2.png";
@@ -10,8 +13,16 @@ import user3 from "/public/user3.png";
 import about_bg from "/public/about_bg.jpg"
 
 export default function  About() {
-  const [index_user_review , setIndex_user_review]=useState(0);
   
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true, 
+  };
+
   
   return (
       <>
@@ -320,83 +331,80 @@ export default function  About() {
               </div>
               <div className="cs_height_35 cs_height_lg_30"></div>
               <div className="cs_slider position-relative">
-                <div className="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
-                  data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="1" data-md-slides="1"  data-lg-slides="1" data-add-slides="1">
-                  <div className="container">
-                    <div className="cs_slider_wrapper">
-                      <div className="slick_slide_in">
-                        <div className="cs_testimonial cs_style_1 text-center">
-                         <blockquote className="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br> customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
-                          <div className="cs_testimonial_user">
-                            <div className="cs_avatar_thumb">
-                              <Image 
-                              src={user}
-                              alt="user_avatar"
-                              height={20}
-                              width={20}
-                              ></Image>
-                           </div>
-                            <h4 className="cs_avatar_title cs_fs_21 cs_semibold mb-0">Bonal Ahmad</h4>
-                            <p className="cs_avatar_subtitle mb-0">From London</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="slick_slide_in">
-                        <div className="cs_testimonial cs_style_1 text-center">
-                            <blockquote className="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br> customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
-                         <div className="cs_testimonial_user">
-                            <div className="cs_avatar_thumb">
-                              <Image
-                              src={user2}
-                              alt="user_avatar"
-                              height={20}
-                              width={20}
-                              ></Image>
-                            </div>
-                            <h4 className="cs_avatar_title cs_fs_21 cs_semibold mb-0">Jhon Doe</h4>
-                            <p className="cs_avatar_subtitle mb-0">From UK</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="slick_slide_in">
-                        <div className="cs_testimonial cs_style_1 text-center">
-                           <blockquote className="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br> customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
-                         <div className="cs_testimonial_user">
-                            <div className="cs_avatar_thumb">
-                            <Image
-                              src={user3}
-                              alt="user_avatar"
-                              height={20}
-                              width={20}
-                              ></Image>
-                            </div>
-                            <h4 className="cs_avatar_title cs_fs_21 cs_semibold mb-0">Kalio Hokeo</h4>
-                            <p className="cs_avatar_subtitle mb-0">From London</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+               <Slider {...settings}>
+               <div class="slick_slide_in">
+              <div class="cs_testimonial cs_style_1 text-center">
+                <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br>customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
+                <div class="cs_testimonial_user">
+                  <div class="cs_avatar_thumb">
+                    <Image
+                    src={user}
+                    alt="user_avater"
+                    height={20}
+                    width={20}
+                    ></Image>
                   </div>
+                  <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0">Saad ur Rehman</h4>
+                  <p class="cs_avatar_subtitle mb-0">From Karachi</p>
                 </div>
-                <div className="cs_slider_arrows cs_style_1 cs_hide_mobile">
-                  <div className="cs_left_arrow cs_slider_arrow cs_accent_color">
-                    <span>
-                      <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.292892 7.29289C-0.0976295 7.68342 -0.0976295 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM36 7L1 7V9L36 9V7Z" fill="currentColor" />
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="cs_right_arrow cs_slider_arrow cs_accent_color">
-                    <span>
-                      <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M35.7071 8.70711C36.0976 8.31659 36.0976 7.68342 35.7071 7.2929L29.3431 0.928935C28.9526 0.53841 28.3195 0.53841 27.9289 0.928935C27.5384 1.31946 27.5384 1.95262 27.9289 2.34315L33.5858 8L27.9289 13.6569C27.5384 14.0474 27.5384 14.6805 27.9289 15.0711C28.3195 15.4616 28.9526 15.4616 29.3431 15.0711L35.7071 8.70711ZM-8.74228e-08 9L35 9L35 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor" />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-                <div className="cs_pagination cs_style_2 cs_hide_desktop"></div>
               </div>
-              <div className="cs_height_135 cs_height_lg_80"></div>
+            </div>
+            <div class="slick_slide_in">
+              <div class="cs_testimonial cs_style_1 text-center">
+                <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br>customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
+                <div class="cs_testimonial_user">
+                  <div class="cs_avatar_thumb">
+                    <Image
+                    src={user2}
+                    alt="user_avater"
+                    height={20}
+                    width={20}
+                    ></Image>
+                  </div>
+                  <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0">Khyzir Hayat</h4>
+                  <p class="cs_avatar_subtitle mb-0">From Dubi</p>
+                </div>
+              </div>
+            </div>
+            <div class="slick_slide_in">
+              <div class="cs_testimonial cs_style_1 text-center">
+                <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br>customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
+                <div class="cs_testimonial_user">
+                  <div class="cs_avatar_thumb">
+                    <Image
+                    src={user3}
+                    alt="user_avater"
+                    height={20}
+                    width={20}
+                    ></Image>
+                  </div>
+                  <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0"> Saeed Desi</h4>
+                  <p class="cs_avatar_subtitle mb-0">From London</p>
+                </div>
+              </div>
+            </div>
+            <div class="slick_slide_in">
+              <div class="cs_testimonial cs_style_1 text-center">
+                <blockquote class="cs_testimonial_text cs_fs_21 cs_semibold">Shopping at Sattiyas has been an absolute delight! I've had the pleasure of being a <br></br>customer for the past year, and I can confidently say that this is my go-to online shopping <br></br> destination. Highly recommend!</blockquote>
+                <div class="cs_testimonial_user">
+                  <div class="cs_avatar_thumb">
+                    <Image
+                    src={user}
+                    alt="user_avater"
+                    height={20}
+                    width={20}
+                    ></Image>
+                  </div>
+                  <h4 class="cs_avatar_title cs_fs_21 cs_semibold mb-0">M.Farooq</h4>
+                  <p class="cs_avatar_subtitle mb-0">From Mars</p>
+                </div>
+              </div>
+            </div>
+              </Slider>
+             
+                <div className="cs_pagination cs_style_2 cs_hide_desktop"></div>
+                
+                </div>
             </section>
 
         

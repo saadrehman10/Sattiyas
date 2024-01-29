@@ -1,8 +1,15 @@
-
+import Instagram_bar from "@/components/instagram_bar/Insragram_bar"
 export default function Home() {
   return (
     <>
-       <h1 className="m-9">This is Home Page.</h1>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+       
+       <Instagram_bar></Instagram_bar>
     </>
       
   )

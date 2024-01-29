@@ -1,6 +1,7 @@
 import '/app/globals.css';
 import React from "react";
 import Image from 'next/image';
+import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser, faMagnifyingGlass, faShoppingCart, faXmark } from '@fortawesome/free-solid-svg-icons';
 import logo from '/public/logo.svg'
@@ -22,19 +23,19 @@ export default function Navbar(){
                         <b class="cs_text_slide cs_medium is-visible">
                         <span>100% Happy return policy</span>
                         <span>
-                            <a href="about.html" class="cs_text_slide_btn">Learn More</a>
+                            <Link href="about.html" class="cs_text_slide_btn">Learn More</Link>
                         </span>
                         </b>
                         <b class="cs_text_slide cs_medium">
                         <span>Big sale offer with 50%</span>
                         <span>
-                            <a href="shop.html" class="cs_text_slide_btn">Learn More</a>
+                            <Link href="/shop" class="cs_text_slide_btn">Learn More</Link>
                         </span>
                         </b>
                         <b class="cs_text_slide cs_medium">
                         <span>New arrival item for you</span>
                         <span>
-                            <a href="shop.html" class="cs_text_slide_btn">Learn More</a>
+                            <Link href="/shop" class="cs_text_slide_btn">Learn More</Link>
                         </span>
                         </b>
                     </span>
@@ -50,7 +51,7 @@ export default function Navbar(){
             <div class="container-fluid">
                 <div class="cs_main_header_in">
                 <div class="cs_main_header_left">
-                    <a class="cs_site_branding" href="/">
+                    <Link class="cs_site_branding" href="/">
                      <Image
                      src={logo}
                      alt='logo'
@@ -58,85 +59,85 @@ export default function Navbar(){
                      width={110}
                      ></Image>   
 
-                    </a>
+                    </Link>
                 </div>
                 <div class="cs_main_header_center">
                     <div class="cs_nav cs_medium">
                     <ul class="cs_nav_list">
                         <li class="menu-item-has-children">
-                        <a href="index.html">Home</a>
+                        <Link href="/">Home</Link>
                         <ul>
-                            <li><a href="index.html">Fashion V1</a></li>
-                            <li><a href="home-v2.html">Fashion V2</a></li>
-                            <li><a href="home-v3.html">Jewelry</a></li>
+                            <li><Link href="/">Fashion V1</Link></li>
+                            <li><Link href="home-v2.html">Fashion V2</Link></li>
+                            <li><Link href="home-v3.html">Jewelry</Link></li>
                         </ul>
                         </li>
                         <li class="menu-item-has-children">
-                        <a href="shop.html">Product</a>
+                        <Link href="/shop">Product</Link>
                         <ul>
-                            <li><a href="shop.html">All Product</a></li>
-                            <li><a href="shop_sidebar.html">Shop Sidebar</a></li>
-                            <li><a href="product_details.html">Product Details</a></li>
+                            <li><Link href="/shop">All Product</Link></li>
+                            <li><Link href="shop_sidebar.html">Shop Sidebar</Link></li>
+                            <li><Link href="product_details.html">Product Details</Link></li>
                         </ul>
                         </li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><Link href="/blog">Blog</Link></li>
                         <li class="menu-item-has-children">
-                        <a href="">Pages</a>
+                        <Link href="">Pages</Link>
                         <ul>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/blog">Blog Details</a></li>
-                            <li><a href="/cart">Cart</a></li>
-                            <li><a href="/checkout">Checkout</a></li>
-                            <li><a href="/success">Success</a></li>
-                            <li><a href="/wishlist">Wishlist</a></li>
+                            <li><Link href="/about">About</Link></li>
+                            <li><Link href="/blog">Blog Details</Link></li>
+                            <li><Link href="/cart">Cart</Link></li>
+                            <li><Link href="/checkout">Checkout</Link></li>
+                            <li><Link href="/success">Success</Link></li>
+                            <li><Link href="/wishlist">Wishlist</Link></li>
                         </ul>
                         </li>
                         <li class="menu-item-has-children cs_mega_menu">
-                        <a href="">MegaMenu</a>
+                        <Link href="">MegaMenu</Link>
                         <ul class="cs_mega_wrapper">
                             <li class="menu-item-has-children">
-                            <a href="">Category One</a>
+                            <Link href="">Category One</Link>
                             <ul>
-                                <li><a href="shop.html">Women's Clothing</a></li>
-                                <li><a href="shop.html">Men's Clothing</a></li>
-                                <li><a href="shop.html">Kids' Clothing</a></li>
-                                <li><a href="shop.html">Shoes (Men, Women, Kids)</a></li>
-                                <li><a href="shop.html">Accessories (e.g., hats, scarves)</a></li>
+                                <li><Link href="/shop">Women's Clothing</Link></li>
+                                <li><Link href="/shop">Men's Clothing</Link></li>
+                                <li><Link href="/shop">Kids' Clothing</Link></li>
+                                <li><Link href="/shop">Shoes (Men, Women, Kids)</Link></li>
+                                <li><Link href="/shop">Accessories (e.g., hats, scarves)</Link></li>
                             </ul>
                             </li>
                             <li class="menu-item-has-children">
-                            <a href="">Category Two</a>
+                            <Link href="">Category Two</Link>
                             <ul>
-                                <li><a href="shop.html">Activewear</a></li>
-                                <li><a href="shop.html">Formal Wear</a></li>
-                                <li><a href="shop.html">Casual Wear</a></li>
-                                <li><a href="shop.html">Outerwear (Jackets, Coats)</a></li>
-                                <li><a href="shop.html">Swimwear</a></li>
+                                <li><Link href="/shop">Activewear</Link></li>
+                                <li><Link href="/shop">Formal Wear</Link></li>
+                                <li><Link href="/shop">Casual Wear</Link></li>
+                                <li><Link href="/shop">Outerwear (Jackets, Coats)</Link></li>
+                                <li><Link href="/shop">Swimwear</Link></li>
                             </ul>
                             </li>
                             <li class="menu-item-has-children">
-                            <a href="">Category Three</a>
+                            <Link href="">Category Three</Link>
                             <ul>
-                                <li><a href="shop.html">Lingerie and Sleepwear</a></li>
-                                <li><a href="shop.html">Maternity Wear</a></li>
-                                <li><a href="shop.html">Plus Size Clothing</a></li>
-                                <li><a href="shop.html">Sustainable Fashion</a></li>
-                                <li><a href="shop.html">Vintage/Second-hand Clothing</a></li>
+                                <li><Link href="/shop">Lingerie and Sleepwear</Link></li>
+                                <li><Link href="/shop">Maternity Wear</Link></li>
+                                <li><Link href="/shop">Plus Size Clothing</Link></li>
+                                <li><Link href="/shop">Sustainable Fashion</Link></li>
+                                <li><Link href="/shop">Vintage/Second-hand Clothing</Link></li>
                             </ul>
                             </li>
                             <li class="menu-item-has-children">
-                            <a href="">Category Four</a>
+                            <Link href="">Category Four</Link>
                             <ul>
-                                <li><a href="shop.html">Sports Apparel</a></li>
-                                <li><a href="shop.html">Workwear</a></li>
-                                <li><a href="shop.html">Designer Clothing</a></li>
-                                <li><a href="shop.html">Seasonal Collections</a></li>
-                                <li><a href="shop.html">Costumes and Cosplay</a></li>
+                                <li><Link href="/shop">Sports Apparel</Link></li>
+                                <li><Link href="/shop">Workwear</Link></li>
+                                <li><Link href="/shop">Designer Clothing</Link></li>
+                                <li><Link href="/shop">Seasonal Collections</Link></li>
+                                <li><Link href="/shop">Costumes and Cosplay</Link></li>
                             </ul>
                             </li>
                         </ul>
                         </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><Link href="contact.html">Contact</Link></li>
                     </ul>
                     </div>
                 </div>
@@ -145,12 +146,12 @@ export default function Navbar(){
                     <button type="button" class="cs_action_icon cs_header_search_btn">
                         <FontAwesomeIcon style={{fontSize:"18px"}} icon={faMagnifyingGlass}></FontAwesomeIcon>
                     </button>
-                    <a href="#" class="cs_action_icon cs_modal_btn"  >
+                    <Link href="#" class="cs_action_icon cs_modal_btn"  >
                     <FontAwesomeIcon style={{fontSize:"20px"}} icon={faCircleUser}></FontAwesomeIcon>
-                    </a>
-                    <a href="shop.html" class="cs_action_icon">
+                    </Link>
+                    <Link href="/shop" class="cs_action_icon">
                     <FontAwesomeIcon style={{fontSize:"20px"}} icon={faShoppingCart}></FontAwesomeIcon>
-                    </a>
+                    </Link>
                     </div>
                 </div>
                 </div>

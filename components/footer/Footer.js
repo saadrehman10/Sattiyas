@@ -1,5 +1,6 @@
 import '/app/globals.css';
 import React from "react";
+import Link from 'next/link';
 import Image from 'next/image'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebook, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
@@ -38,11 +39,11 @@ export default function Footer(){
                             <div className="cs_footer_widget cs_menu_widget">
                             <h3 className="cs_footer_widget_title cs_fs_21 cs_semibold">Get to know</h3>
                             <ul>
-                                <li><a href="/about" style={{color:"grey"}}>About Us</a></li>
-                                <li><a href="/shop" style={{color:"grey"}}>Product</a></li>
-                                <li><a href="/blog_details" style={{color:"grey"}}>Press</a></li>
-                                <li><a href="/blog" style={{color:"grey"}}>Blog</a></li>
-                                <li><a href="/contact" style={{color:"grey"}}>Contact Us</a></li>
+                                <li><Link href="/about" style={{color:"grey"}}>About Us</Link></li>
+                                <li><Link href="/shop" style={{color:"grey"}}>Product</Link></li>
+                                <li><Link href="/blog_details" style={{color:"grey"}}>Press</Link></li>
+                                <li><Link href="/blog" style={{color:"grey"}}>Blog</Link></li>
+                                <li><Link href="/contact" style={{color:"grey"}}>Contact Us</Link></li>
                             </ul>
                             </div>
                         </div>
@@ -50,10 +51,10 @@ export default function Footer(){
                             <div className="cs_footer_widget cs_menu_widget">
                             <h3 className="cs_footer_widget_title cs_fs_21 cs_semibold">Customer Service</h3>
                             <ul >
-                                <li ><a href="#" style={{color:"grey"}}>Help Center</a></li>
-                                <li><a href="#" style={{color:"grey"}}>Shipping & Delivery</a></li>
-                                <li><a href="#" style={{color:"grey"}}>Exchange & Return</a></li>
-                                <li><a href="#" style={{color:"grey"}}>Payment Method</a></li>
+                                <li ><Link href="#" style={{color:"grey"}}>Help Center</Link></li>
+                                <li><Link href="#" style={{color:"grey"}}>Shipping & Delivery</Link></li>
+                                <li><Link href="#" style={{color:"grey"}}>Exchange & Return</Link></li>
+                                <li><Link href="#" style={{color:"grey"}}>Payment Method</Link></li>
                             </ul>
                             </div>
                         </div>
@@ -77,18 +78,18 @@ export default function Footer(){
                     </div>
                     <div>
                     <ul className='cs_footer_menu_widget_2'>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Legal</a></li>
+                        <li><Link href="#">Privacy Policy</Link></li>
+                        <li><Link href="#">Terms of Use</Link></li>
+                        <li><Link href="#">Legal</Link></li>
                     </ul>
                     </div>
                     <div>
                     <div className='cs_social_links'>
                     <div className='cs_social_links'>
-                        <a href="https://www.instagram.com/" target="_blank"> <FontAwesomeIcon style={{fontSize:"20px", color:"grey"}} icon={faInstagram}></FontAwesomeIcon></a>
-                        <a href="https://www.facebook.com/" target="_blank"><FontAwesomeIcon style={{fontSize:"20px",color:"grey"}} icon={faFacebook}></FontAwesomeIcon></a>
-                        <a href="https://twitter.com/" target="_blank"><FontAwesomeIcon style={{fontSize:"20px",color:"grey"}} icon={faTwitter}></FontAwesomeIcon></a>
-                        <a href="https://www.youtube.com/" target="_blank"><FontAwesomeIcon style={{fontSize:"20px",color:"grey"}} icon={faYoutube}></FontAwesomeIcon></a>
+                        <Link href="https://www.instagram.com/" target="_blank"><FontAwesomeIcon style={{fontSize:"20px", color:"grey"}} icon={faInstagram}></FontAwesomeIcon></Link>
+                        <Link href="https://www.facebook.com/" target="_blank"><FontAwesomeIcon style={{fontSize:"20px",color:"grey"}} icon={faFacebook}></FontAwesomeIcon></Link>
+                        <Link href="https://twitter.com/" target="_blank"><FontAwesomeIcon style={{fontSize:"20px",color:"grey"}} icon={faTwitter}></FontAwesomeIcon></Link>
+                        <Link href="https://www.youtube.com/" target="_blank"><FontAwesomeIcon style={{fontSize:"20px",color:"grey"}} icon={faYoutube}></FontAwesomeIcon></Link>
                         </div>
                     </div>
                     </div>
