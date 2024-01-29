@@ -58,7 +58,7 @@ export default function People_review(){
        <div className="cs_gray_bg mb-28 ">
               <div className="cs_height_120 cs_height_lg_70"></div>
               <div className="container">
-                <h2 className="cs_section_title cs_fs_50 cs_bold mb-0 text-center">What Our People Says</h2>
+                <h2 className="cs_section_title cs_fs_50 cs_bold mb-0 text-center text-black">What Our People Says</h2>
               </div>
               <div className="cs_height_35 cs_height_lg_30"></div>
               <div className="cs_slider position-relative ">
@@ -74,20 +74,19 @@ export default function People_review(){
                                 <div className="cs_avatar_thumb">
                                     <Image src={testimonial.avatar} alt="user_avatar" height={20} width={20} />
                                 </div>
-                                <h4 className="cs_avatar_title cs_fs_21 cs_semibold mb-">{testimonial.user}</h4>
-                                <p className="cs_avatar_subtitle mb-9">{testimonial.location}</p>
+                                <h4 className="cs_avatar_title cs_fs_21 cs_semibold text-black">{testimonial.user}</h4>
+                                <p className="cs_avatar_subtitle text-black">{testimonial.location}</p>
                                 </div>
                             </div>
                             </div>
                         </div>
                     ))}
+                    
                </Slider>
-             
-                <div className="cs_pagination cs_style_2 cs_hide_desktop"></div>
-                
-                </div>
+                  <div className="cs_pagination cs_style_2 cs_hide_desktop"></div> 
+                 </div>
             </div>
-
+       
         </>
       
     );
