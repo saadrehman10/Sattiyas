@@ -10,19 +10,19 @@ export default function Login () {
     }
     return(
         <>
-        <nav><Navbar></Navbar></nav>
-         <div className='loginCard justify-center align-self-center gap-4'>
-               <h1 className='login'>User Login</h1>
-               <hr></hr>
+        <nav><Navbar></Navbar><br></br><br></br><br></br><br></br></nav>
+        <div className="cs_login_container">
+         <div className='loginCard gap-4 alin'>
+               <h3 className="text-center fs-2">User Login</h3>
                <Input_field desing="1" placeholder="Username" type="text"></Input_field>
-               <hr></hr>
                <Input_field desing="1" placeholder="Password" type="password"></Input_field>
-               <Button txt="Login" desing="1" onClick={loginFunction}></Button>
+               <Button txt="Login" desing="1" onClick={loginFunction} ></Button>
                <hr></hr>
                <p className="ml-4">Don't have an account? <Link href="/singup">Sign Up</Link> here.</p>
             </div>
+        </div>
           <footer><Footer></Footer></footer>
-
+          
         </>
     );
 }

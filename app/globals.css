@@ -7368,9 +7368,10 @@ Pavigation styling
   flex-direction: column;
   justify-content: space-between;
   align-items: normal;
-  padding: 3rem 4rem 4rem 4rem !important;
-  margin: 4rem 1rem !important;
-  width:  20% !important;
+  padding: 3rem 4rem 4rem 4rem ;
+  margin: 4rem 1rem ;
+  height: 32rem;
+  width: 25rem;
   border-radius: 13px;
   z-index: 10;  
   background: linear-gradient(145deg, #dbd9d9, #b9b7b7);
@@ -7378,16 +7379,13 @@ Pavigation styling
               -41px -41px 82px #ffffff;
               
 }
-
-.login{
-  font-family: Arial, Helvetica, sans-serif !important;
+.cs_login_container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.bodyLogin{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 
-}
 
 /* --------------------------------------------- */
 
