@@ -27,6 +27,7 @@
 25. Shop
 26. Contact
 27. Login Page
+28. Singup Page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Basic Color
@@ -7385,9 +7386,101 @@ Pavigation styling
   align-items: center;
   justify-content: center;
 }
+/*--------------------------------------------------------------
+28. Singup Page
+----------------------------------------------------------------*/
+.singupCard{
+  margin: 7rem 3rem 4rem 3rem;
+  padding: 1.5rem;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #dbd9d9, #b9b7b7);
+  box-shadow:  41px 41px 82px #525151,
+              -41px -41px 82px #ffffff;
+}
+.formAttribute{
+  width: 80%;
+}
+.headName{
+  margin: 0rem 0rem 0rem 1rem;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.buttonCard{
+  margin: 1rem 3rem 1rem 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  
+}
+.formDesing{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2.5rem auto 0rem auto;
+  width: 80%;
+  color: rgb(65, 65, 65);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none !important;
+}
+
+.radio-wrapper {
+  margin-bottom: 20px;
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-button:hover {
+  transform: translateY(-2px);
+}
+
+.radio-button input[type="radio"] {
+  display: none;
+}
+
+.radio-checkmark {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+.radio-checkmark:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #333;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked ~ .radio-checkmark:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-label {
+  font-size: 16px;
+  font-weight: 600;
+}
 
 
-/* --------------------------------------------- */
+
+
 
 /* animation-header css */
 /* -------------------------------- 
