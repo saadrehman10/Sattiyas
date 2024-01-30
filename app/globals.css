@@ -7407,6 +7407,7 @@ Pavigation styling
 }
 .buttonCard{
   margin: 1rem 3rem 1rem 1rem;
+  justify-content: space-between;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -7478,7 +7479,9 @@ Pavigation styling
   font-weight: 600;
 }
 
-
+.cs_sigup_body{
+ margin-top:10rem ;
+}
 
 
 

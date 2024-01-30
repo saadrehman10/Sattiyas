@@ -62,7 +62,7 @@ export default function Sigup(){
     return(
         <>
         <nav><Navbar></Navbar></nav>
-        <body className="cs_sigup_body">
+        <div className="cs_sigup_body">
             <div className='singupCard'>
               <h3 className='headName'>Create Account</h3>
                <form onSubmit={handleSubmit} >
@@ -114,9 +114,6 @@ export default function Sigup(){
                         ></Input_field>
                     </div>
 
-                    
-
-                   
 
                     <div className='formAttribute'>
                         <Input_field
@@ -151,8 +148,6 @@ export default function Sigup(){
                     
                     </div>
 
-
-                  
 
                     <div className='formAttribute'>
                         <Input_field
@@ -272,18 +267,13 @@ export default function Sigup(){
 
                     <div className="buttonCard">
                       <Buttons desing="1" txt="Sing Up" type="submit" ></Buttons>
-                      <hr />
+                      <hr></hr>
                       <p>Already have an account? <Link href="/login"> Login here</Link></p>
                     </div>
                     
                 </form>
-            
-                
-
             </div>
-            
-
-        </body>
+        </div>
        <footer><Footer></Footer></footer>
 
         </>
