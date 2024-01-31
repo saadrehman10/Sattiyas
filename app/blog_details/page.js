@@ -8,14 +8,13 @@ import Image from "next/image";
 import { faTwitter,faLinkedinIn,faFacebook,faYoutube } from "@fortawesome/free-brands-svg-icons";
 import post_detail from '/public/post_details.jpg';
 import auther from '/public/author.png';
+import Layout from "@/components/Layout";
 
 
 export default function Blog_details(){
     return(
-        <>
-        <nav>
-          <Navbar></Navbar>
-        </nav>
+        <Layout>
+       
         
           <section>
             <div className="cs_height_140 cs_height_lg_80"></div>
@@ -148,10 +147,8 @@ export default function Blog_details(){
           <section>
             <Instagram_bar></Instagram_bar>
           </section>
-          <footer>
-            <Footer></Footer>
-          </footer>
-        </>
+        
+        </Layout>
     )
 
 }

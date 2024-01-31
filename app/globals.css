@@ -8740,3 +8740,22 @@ xpush
     transform: translateX(100%);
   }
 }
+
+
+/* ==================== SIGNUP ================================== */
+.signup-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+/* ==================== SIGNUP ================================== */
