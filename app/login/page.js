@@ -6,8 +6,13 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import {useLocalStorage} from "react-use"
+
+
 export default function Login() {
     
+  const [value, setValue, remove] = useLocalStorage('auth', '');
+
 
     const {
         register,
@@ -24,9 +29,9 @@ export default function Login() {
               data
             }).then((res) => {
               console.log(res.data)
-              dispatch(addUser(res.data))
-              toast('Registered Successfully')
+              console.log('Registered Successfully')
               window.location.pathname = '/about';
+              setValue(res.data)
       
             }).catch((err) => {
               // console.log(err)

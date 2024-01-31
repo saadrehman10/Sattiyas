@@ -33,9 +33,8 @@ export default function Sigup() {
         data
       }).then((res) => {
         console.log(res.data)
-        dispatch(addUser(res.data))
         toast('Registered Successfully')
-        window.location.pathname = '/about';
+        window.location.pathname = '/login';
 
       }).catch((err) => {
         // console.log(err)

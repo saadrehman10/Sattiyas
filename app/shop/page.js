@@ -497,6 +497,8 @@ export default function Shop() {
                                                     <a
                                                         onClick = {()=>{
                                                             dispatch(addCart(item))
+
+                                                            
                                                             toast("SuccessFully Add To the Cart")
                                                         }}
                                                         className="cs_cart_btn cs_accent_bg cs_fs_16 cs_white_color cs_medium position-absolute"
