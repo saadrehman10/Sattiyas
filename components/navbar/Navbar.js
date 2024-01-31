@@ -153,7 +153,7 @@ export default function Navbar() {
                                     <button type="button" class="cs_action_icon cs_header_search_btn">
                                         <FontAwesomeIcon style={{ fontSize: "18px" }} icon={faMagnifyingGlass}></FontAwesomeIcon>
                                     </button>
-                                    <Link href="#" class="cs_action_icon cs_modal_btn"  >
+                                    <Link href="/login" class="cs_action_icon cs_modal_btn"  >
                                         <FontAwesomeIcon style={{ fontSize: "20px" }} icon={faCircleUser}></FontAwesomeIcon>
                                     </Link>
                                     <Link href="/cart" class="cs_action_icon">
