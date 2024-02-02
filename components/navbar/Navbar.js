@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 export default function Navbar() {
 
     const cartData = useSelector(state => state)
-    console.log(cartData)   
+    console.log(cartData)
 
 
     return (
