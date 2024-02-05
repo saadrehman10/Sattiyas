@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Footer from "@/components/footer/Footer"
 import Instagram_bar from "@/components/instagram_bar/Insragram_bar"
 import Navbar from "@/components/navbar/Navbar"
@@ -5,7 +6,9 @@ import People_review from "@/components/people_review/People_review"
 import Search_blog from "@/components/search_blog/Search_blog"
 import Product_card from "@/components/product_card/Product_card"
 import Layout from "@/components/Layout"
-
+import hero2 from  '../public/hero2.jpg';
+import animated_text from '/public/animated_text.png';
+import hero5 from '/public/hero5.jpg';
 
 
 export default function Home() {
@@ -28,9 +31,21 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="cs_hero_right">
-                        <div className="cs_hero_thumb">{/* <img src="assets/img/hero2.jpg" alt="Thumb"> */}</div>
+                        <div className="cs_hero_thumb">
+                          <Image
+                          src={hero2}
+                          alt="Thumb"
+                          height={1072}
+                          width={1140}                          
+                          ></Image>
+                          </div>
                         <div className="cs_animated_text position-absolute">
-                          {/*  <img src="assets/img/animated_text.png" alt="Text Image"> */}
+                          <Image
+                          src={animated_text}
+                          alt="animated_text"
+                          height={300}
+                          width={300}
+                          ></Image>
                           <span className="cs_text_light cs_accent_bg"></span>
                         </div>
                       </div>
@@ -46,9 +61,21 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="cs_hero_right">
-                        <div className="cs_hero_thumb">{/* <img src="assets/img/hero5.jpg" alt="Thumb"> */}</div>
+                        <div className="cs_hero_thumb">
+                          <Image
+                          src={hero5}
+                          alt="hero5"
+                          height={1072}
+                          width={1140}
+                          ></Image>
+                          </div>
                         <div className="cs_animated_text position-absolute">
-                          {/* <img src="assets/img/animated_text.png" alt="Text Image"> */}
+                          <Image
+                          src={animated_text}
+                          alt="Animated Text"
+                          height={300}
+                          width={300}
+                          ></Image>
                           <span className="cs_text_light cs_accent_bg"></span>
                         </div>
                       </div>
@@ -75,7 +102,7 @@ export default function Home() {
                 </div>
 
               </div>
-              <div className="cs_slides_numbers" /* style="display: block;" */>
+              <div className="cs_slides_numbers block">
                 <span className="active">01</span><span className="cs_slide_seperator"> / </span><span className="cs_total_slide"></span>
               </div>
             </div>
