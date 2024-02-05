@@ -1,9 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import hero2 from  '/public/hero2.jpg';
+import animated_text from '/public/animated_text.png';
+import Slider from "react-slick";
 
 export default function Home_slider () {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
     return(
         <>
+        {/* <Slider {...settings}>
+
+
+
+        </Slider> */}
             <section className="container-fluid">
                 <div className="cs_slider position-relative">
                 <div className="cs_slider_container" data-autoplay="1" data-loop="1" data-speed="700" data-center="0"
@@ -51,7 +66,7 @@ export default function Home_slider () {
                         <div className="cs_hero_right">
                             <div className="cs_hero_thumb">
                             <Image
-                            src={hero5}
+                            src={hero2}
                             alt="hero5"
                             height={1072}
                             width={1140}
@@ -79,9 +94,20 @@ export default function Home_slider () {
                             </div>
                         </div>
                         <div className="cs_hero_right">
-                            <div className="cs_hero_thumb">{/* <img src="assets/img/hero6.jpg" alt="Thumb"> */}</div>
+                            <div className="cs_hero_thumb">
+                            <Image
+                            src={hero2}
+                            alt="Thumb"
+                            height={1072}
+                            width={1140}                          
+                            ></Image></div>
                             <div className="cs_animated_text position-absolute">
-                            {/* <img src="assets/img/animated_text.png" alt="Text Image"> */}
+                            <Image
+                            src={animated_text}
+                            alt="Animated Text"
+                            height={300}
+                            width={300}
+                            ></Image>
                             <span className="cs_text_light cs_accent_bg"></span>
                             </div>
                         </div>
@@ -90,11 +116,11 @@ export default function Home_slider () {
                     </div>
 
                 </div>
-                <div className="cs_slides_numbers block">
-                    <span className="active">01</span><span className="cs_slide_seperator"> / </span><span className="cs_total_slide"></span>
-                </div>
                 </div>
             </section>
+            <div className="cs_slides_numbers">
+                    <span className="active">01</span><span className="cs_slide_seperator"> / </span><span className="cs_total_slide"></span>
+            </div>
         
         </>
     )

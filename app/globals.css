@@ -2549,6 +2549,7 @@ Slider arrow design
 }
 
 .cs_slides_numbers {
+  display: block;
   position: absolute;
   bottom: 12%;
   left: 75px;
