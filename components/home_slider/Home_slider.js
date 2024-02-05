@@ -4,6 +4,8 @@ import hero2 from  '/public/hero2.jpg';
 import animated_text from '/public/animated_text.png';
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Home_slider () {
     const settings = {
@@ -13,14 +15,13 @@ export default function Home_slider () {
         slidesToShow: 1,
         slidesToScroll: 1
       };
-      
+
     return(
         <>
             <section className="container-fluid">
             <Slider {...settings}>
                     <div className="cs_slider position-relative">
-                        <div className="cs_slider_container" data-autoplay="1" data-loop="1" data-speed="700" data-center="0"
-                            data-slides-per-view="1" data-fade-slide="1">
+                        <div className="cs_slider_container" >
                             <div className="cs_slider_wrapper">
                             <div className="slick_slide_in">
                                 <div className="cs_hero cs_style_2 position-relative">
